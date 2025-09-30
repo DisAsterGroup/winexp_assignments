@@ -22,10 +22,11 @@ includes フォルダを...
 * IDA Pro
 * Ghidra
 
-## Windows Programming 101
 ### Visual Studio
 
 Windows の開発で主流の統合開発環境 (IDE)。ここでは簡単な使い方を解説する。
+
+Download
 
 Create a new project を選択し、Console App を指定、プロジェクト名・保存先を指定して、プロジェクトを作成する。
 
@@ -33,21 +34,23 @@ Create a new project を選択し、Console App を指定、プロジェクト�
 <img src="./assets/img_0x0002.png" width="50%">
 <img src="./assets/img_0x0003.png" width="50%">
 
-プロジェクト作成後、Project > <Project 名> Properties より、プロジェクトの設定を変更できる。よく使うのは、ヘッダを追加するために C/C++ > General > Additional Include Directories
+プロジェクト作成後、`Project > <Project 名> Properties` より、プロジェクトの設定を変更できる。よく使うのは、ヘッダファイルの参照先フォルダを追加する `C/C++ > General > Additional Include Directories`
 
+<img src="./assets/img_0x0004.png" width="50%">
 
+ライブラリを追加する `Linker > Input > Additional Dependencies` など
 
-ライブラリを追加するために Linker > Input > Additional Dependencies など
+<img src="./assets/img_0x0005.png" width="50%">
 
+また、Visual Studio のプロジェクトの多くが Release/Debug という2つの構成を最低限持っており、デバッグ情報を含むかといった違いがある。
 
-
-ビルド、Release/Debug
+<img src="./assets/img_0x0006.png" width="50%">
 
 #### Exercise 0.1 (フラグなし)
 
 HelloWorld.sln を Visual Studio で開き、ビルド、実行してみよう。
 
-### x86_64 命令セット
+## x86_64 命令セット
 
 CPU がデータを扱う際、メモリかレジスタを経由して読み書きを行う。x64 環境のレジスタは、以下のような種類がある:
 
@@ -206,15 +209,15 @@ PE ファイルはセクションという複数の領域に分かれており�
 ## リバースエンジニアリング 101
 ### PE-bear
 
-
+TODO
 
 ### Binary Ninja
 
-
+TODO
 
 ### WinDbg
 
-
+TODO
 
 ### Exercise 0.4
 
