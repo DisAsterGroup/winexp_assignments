@@ -30,8 +30,8 @@ Windows の開発で主流の統合開発環境 (IDE)
 
 Visual Studio Installer を起動し、Visual Studio 2022 をインストールする。この際、C++ の開発環境がチェックされていることを確認する。
 
-<img src="./assets/img_0x0000a.png" width="10%">
-<img src="./assets/img_0x0000b.png" width="10%">
+<img src="./assets/img_0x0000a.png" width="30%">
+<img src="./assets/img_0x0000b.png" width="30%">
 
 #### Usage
 
@@ -53,7 +53,7 @@ Create a new project を選択し、Console App を指定、プロジェクト�
 
 また、Visual Studio のプロジェクトの多くが Release/Debug という2つの構成を最低限持っており、デバッグ情報を含むかといった違いがある。
 
-<img src="./assets/img_0x0006.png" width="10%">
+<img src="./assets/img_0x0006.png" width="30%">
 
 #### Exercise 0.1 (フラグなし)
 
