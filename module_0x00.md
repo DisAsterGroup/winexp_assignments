@@ -29,7 +29,7 @@ Windows の開発で主流の統合開発環境 (IDE)。ここでは簡単な使
 
 Create a new project を選択し、Console App を指定、プロジェクト名・保存先を指定して、プロジェクトを作成する。
 
-![]()
+![](./asset/img_0x0001.png)
 
 プロジェクト作成後、Project > <Project 名> Properties より、プロジェクトの設定を変更できる。よく使うのは、ヘッダを追加するために C/C++ > General > Additional Include Directories
 
