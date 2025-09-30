@@ -59,7 +59,7 @@ Create a new project を選択し、Console App を指定、プロジェクト�
 
 `HelloWorld/HelloWorld.sln` をダブルクリックして開き、Local Windows Debugger をクリックして実行してみよう。
 
-<img src="./assets/img_0x0006.png" width="50%">
+<img src="./assets/img_0x0007.png" width="40%">
 
 ## x86_64 命令セット
 
