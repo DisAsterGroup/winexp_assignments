@@ -1,6 +1,6 @@
 この Windows バイナリ実験講義では、PE ファイル、プロセスに焦点を当て、実験を通して攻撃・防御手法、ソフトウェア・リバースエンジニアリングの手法について学習する。こういった知見はマルウェア解析やフォレンジックには必須だし、最近はペネトレーションテストなどの、EDR・アンチウイルス製品の検知バイパスの文脈でも要求される場合がある。セキュリティ業界で汎用的な知見を得ることができるだろう。
 
-講義資料の中では、リバースエンジニアリングで一般的なキーワードが散りばめられている。事前準備の段階や、講義の中で何か分からないことがあれば、こういったキーワードを起点に調べてみると、有用な情報が見つかるかもしれない。
+講義資料の中では、リバースエンジニアリングで一般的なキーワードが登場する。事前準備の段階や、講義の中で何か分からないことがあれば、こういったキーワードを起点に調べてみると、有用な情報が見つかるかもしれない。いくつかの英語で書かれた参考文献が登場するが、現実世界でも一次ソースやトレーニングなどはほぼ英語で提供されており、避けては通れない。適宜翻訳ツールなどを用いて読解に挑戦してみよう。
 
 また、必須ではないが、本講義の中ではいくつかの演習問題が登場する。ぜひ、自分で手を動かして解いてみてほしい。
 
@@ -123,7 +123,7 @@ cmp rax, rbx;
 
 以下の命令は、ZF フラグの値に応じてジャンプ先を変更する:
 
-```
+```asm
 ; ZF=1
 je hoge
 jz hoge
@@ -190,16 +190,27 @@ ret;
 
 ModR/M については、Software Developer Manual の2.1節を参照のこと。
 
-## PE ファイル
+## [PE ファイル](https://learn.microsoft.com/en-us/windows/win32/debug/pe-format)
 Windows の実行可能ファイルで、.exe、.dll、.sys などの拡張子を持つ。実行時には仮想メモリ上に展開される。ちなみに他の有名な実行可能ファイルとしては、ELF ファイルがある。
 
-TODO: Visualize Sections
+PE ファイルは以下のヘッダから構成されている:
 
 * DOS header
 * NT headers
 * File header
 * Optional header
 * Section headers
+
+<img src="./assets/img_0x0008.png" width="50%">
+
+```c
+PIMAGE_DOS_HEADER        pDOSHeader = (PIMAGE_DOS_HEADER)lpPE;
+PIMAGE_NT_HEADERS64      pNTHeaders = (PIMAGE_NT_HEADERS64)(lpPE + pDOSHeader->e_lfanew);
+PIMAGE_FILE_HEADER       pFileHeader = &pNTHeaders->FileHeader;
+PIMAGE_OPTIONAL_HEADER64 pOptHeader = &pNTHeaders->OptionalHeader;
+// Note: section headers reside right after an optional header
+PIMAGE_SECTION_HEADER    aSecHeaders = (PIMAGE_SECTION_HEADER)((DWORDLONG)pOptHeader + pFileHeader->SizeOfOptionalHeader);
+```
 
 ### DOS header
 https://0xrick.github.io/win-internals/pe3/
