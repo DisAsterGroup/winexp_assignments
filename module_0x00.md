@@ -55,9 +55,11 @@ Create a new project を選択し、Console App を指定、プロジェクト�
 
 <img src="./assets/img_0x0006.png" width="30%">
 
-#### Exercise 0.1 (フラグなし)
+### Exercise 0.1 (フラグなし)
 
-HelloWorld.sln を Visual Studio で開き、ビルド、実行してみよう。
+`HelloWorld/HelloWorld.sln` をダブルクリックして開き、Local Windows Debugger をクリックして実行してみよう。
+
+<img src="./assets/img_0x0006.png" width="50%">
 
 ## x86_64 命令セット
 
@@ -180,10 +182,10 @@ ret;
 
 以上、ここでは最小限の説明に留めたが、必要に応じて [Software Developer Manual](https://cdrdv2.intel.com/v1/dl/getContent/671110) なども参照することを推奨する。
 
-#### Exercise 0.2
+### Exercise 0.2
 レジスタの中身をスタックに積みたい。このとき、どの命令を使えばいいだろうか?
 
-#### Exercise 0.3
+### Exercise 0.3
 `mov` 命令 (89 /r) で ebx レジスタの値を ecx レジスタに移動したい。このとき、ModR/M バイトが示す値は何になるだろうか? 16進数で答えよ。
 
 ModR/M については、Software Developer Manual の2.1節を参照のこと。
