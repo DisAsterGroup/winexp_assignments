@@ -13,20 +13,29 @@
 * [PE-bear](https://github.com/hasherezade/pe-bear/releases)
 * Zydis
 
-TODO
-Zydis については、配布する Zycore.dll、Zydis.dll、.lib を任意の箇所にコピーし、PATH を通す。
-includes フォルダを...
-
 本講義は主に上記のツールを使用するが、講義内容、演習問題は、特に解析環境に依存しない。サポートはできないものの、以下のツールを代わりに使用することも可能:
 
 * IDA Pro
 * Ghidra
 
+TODO
+また、Zydis については、配布する Zycore.dll、Zydis.dll、.lib を任意の箇所にコピーし、PATH を通す。
+includes フォルダを...
+
 ### Visual Studio
 
-Windows の開発で主流の統合開発環境 (IDE)。ここでは簡単な使い方を解説する。
+Windows の開発で主流の統合開発環境 (IDE)
 
-Download
+#### Installation
+
+Visual Studio Installer を起動し、Visual Studio 2022 をインストールする。この際、C++ の開発環境がチェックされていることを確認する。
+
+<img src="./assets/img_0x0000a.png" width="10%">
+<img src="./assets/img_0x0000b.png" width="10%">
+
+#### Usage
+
+ここでは簡単な使い方を解説する。
 
 Create a new project を選択し、Console App を指定、プロジェクト名・保存先を指定して、プロジェクトを作成する。
 
@@ -44,7 +53,7 @@ Create a new project を選択し、Console App を指定、プロジェクト�
 
 また、Visual Studio のプロジェクトの多くが Release/Debug という2つの構成を最低限持っており、デバッグ情報を含むかといった違いがある。
 
-<img src="./assets/img_0x0006.png" width="50%">
+<img src="./assets/img_0x0006.png" width="10%">
 
 #### Exercise 0.1 (フラグなし)
 
@@ -203,10 +212,10 @@ PE ファイルはセクションという複数の領域に分かれており�
 ### .text section
 プログラムが保存されているセクション。
 
+## リバースエンジニアリング 101
 推論
 まず、文字列、シンボル名など分かりやすい部分から埋めていく
 
-## リバースエンジニアリング 101
 ### PE-bear
 
 TODO
