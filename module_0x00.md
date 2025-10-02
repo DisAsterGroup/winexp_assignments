@@ -67,7 +67,7 @@ Create a new project を選択し、Console App を指定、プロジェクト�
 
 CPU がデータを扱う際、メモリかレジスタを経由して読み書きを行う。x64 環境のレジスタは、以下のような種類がある:
 
-| Registers | Usage |
+| Register | Usage |
 | --- | --- |
 | rax ||
 | rbx ||
@@ -246,9 +246,24 @@ Binary Ninja は Vector 35 が開発するデコンパイラ・ディスアセ�
 
 左下の Cross References には、現在中央に表示されている関数を呼んでいる箇所が表示される。
 
-### WinDbg を使用解析手順
+### WinDbg を使用した解析手順
+Microsoft 製のデバッガで、動的解析の用途では、ほぼデファクトスタンダードのツールと言っていい。
 
-TODO
+<img src="./assets/img_0x0009.png" width="50%">
+
+左上の File をクリックし、`Launch executable` から実行ファイルを選択するとデバッグが開始する。`Launch executable (advanced)` では、プログラムに渡す引数を指定できる。
+
+<img src="./assets/img_0x0009.png" width="50%">
+
+デバッガを用いた解析は、基本的にブレークポイントをアドレスに設定、その箇所まで実行し、レジスタやメモリの中身を確認、という流れで進んでいく。以下、WinDbg でよく使用するコマンドをまとめておく:
+
+| Command | Usage |
+| ---     | ---   |
+| bp | ブレークポイントの設定 |
+| g  | 次のブレークポイントまで実行 |
+| r  | レジスタの情報を表示 |
+| p  | ステップアウト実行 (関数の中に入らない) |
+| t  | ステップイン実行 |
 
 ### Exercise 0.4
 
