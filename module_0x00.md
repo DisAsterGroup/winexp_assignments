@@ -249,11 +249,9 @@ Binary Ninja は Vector 35 が開発するデコンパイラ・ディスアセ�
 ### WinDbg を使用した解析手順
 Microsoft 製のデバッガで、動的解析の用途では、ほぼデファクトスタンダードのツールと言っていい。
 
-<img src="./assets/img_0x0009.png" width="50%">
-
 左上の File をクリックし、`Launch executable` から実行ファイルを選択するとデバッグが開始する。`Launch executable (advanced)` では、プログラムに渡す引数を指定できる。
 
-<img src="./assets/img_0x0009.png" width="50%">
+<img src="./assets/img_0x0009.png" width="100%">
 
 デバッガを用いた解析は、基本的にブレークポイントをアドレスに設定、その箇所まで実行し、レジスタやメモリの中身を確認、という流れで進んでいく。以下、WinDbg でよく使用するコマンドをまとめておく:
 
