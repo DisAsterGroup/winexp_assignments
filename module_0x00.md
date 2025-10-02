@@ -13,9 +13,7 @@
 * [PE-bear](https://github.com/hasherezade/pe-bear/releases)
 * Zydis
 
-TODO
-Zydis については、配布する Zycore.dll、Zydis.dll、.lib を任意の箇所にコピーし、PATH を通す。
-includes フォルダを...
+Zydis については、ビルド済みのライブラリを講義の中で配布予定.
 
 > [!NOTE]
 > 本講義は主に上記のツールを使用するが、講義内容、演習問題は、特に解析環境に依存しない。サポートはできないものの、IDA Pro、Ghidra、OllyDbg、x64dbg などのツールを代わりに使用することも可能。
