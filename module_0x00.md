@@ -214,13 +214,11 @@ PIMAGE_OPTIONAL_HEADER64 pOptHeader = &pNTHeaders->OptionalHeader;
 PIMAGE_SECTION_HEADER    aSecHeaders = (PIMAGE_SECTION_HEADER)((DWORDLONG)pOptHeader + pFileHeader->SizeOfOptionalHeader);
 ```
 
-### DOS header
-https://0xrick.github.io/win-internals/pe3/
+### [DOS header](https://0xrick.github.io/win-internals/pe3/)
 
 MZ というマジックナンバーが必ず入る。マルウェアが動的にファイルをメモリに読み込む際は、大体 `if (buf[0] == 'M' and buf[1] == 'Z')` のようなチェックが入るため、この2文字が解析のヒントになる場合がある。
 
-### Section headers
-https://0xrick.github.io/win-internals/pe5/
+### [Section headers](https://0xrick.github.io/win-internals/pe5/)
 
 PE ファイルはセクションという複数の領域に分かれており、セクションヘッダが指定する RVA (Relative Virtual Address) に各セクションは配置される。
 
@@ -251,7 +249,7 @@ Microsoft 製のデバッガで、動的解析の用途では、ほぼデファ�
 
 左上の File をクリックし、`Launch executable` から実行ファイルを選択するとデバッグが開始する。`Launch executable (advanced)` では、プログラムに渡す引数を指定できる。
 
-<img src="./assets/img_0x0010.png" width="100%">
+<img src="./assets/img_0x0010.png" width="50%">
 
 デバッガを用いた解析は、基本的にブレークポイントをアドレスに設定、その箇所まで実行し、レジスタやメモリの中身を確認、という流れで進んでいく。以下、WinDbg でよく使用するコマンドをまとめておく:
 
