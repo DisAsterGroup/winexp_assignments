@@ -13,7 +13,7 @@
 * [PE-bear](https://github.com/hasherezade/pe-bear/releases)
 * Zydis
 
-Zydis については、ビルド済みのライブラリを講義の中で配布予定.
+Zydis については、ビルド済みのライブラリを講義の中で配布予定。
 
 > [!NOTE]
 > 本講義は主に上記のツールを使用するが、講義内容、演習問題は、特に解析環境に依存しない。サポートはできないものの、IDA Pro、Ghidra、OllyDbg、x64dbg などのツールを代わりに使用することも可能。
@@ -252,8 +252,7 @@ Microsoft 製のデバッガで、動的解析の用途では、ほぼデファ�
 | t  | ステップイン実行 |
 
 ### Exercise 0.4
-
-Binary Ninja、WinDbg で解析してみよう
+ex_0x04.exe は特定の引数が渡されると、`Matched!` と出力する。Binary Ninja、WinDbg で解析してみよう。引数がフラグ。
 
 ### Exercise 0.5
-WinDbg で解析
+ex_0x05.exe は、関数を呼び出すために難読化のテクニックを用いている。最終的にどの関数が呼ばれるだろうか。Binary Ninja、WinDbg で解析し、その関数のアドレスを16進数で答えてほしい。
